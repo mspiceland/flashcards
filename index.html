@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Flashcards</title>
+        <link rel="stylesheet" type="text/css" href="flashcards.css" />
+    </head>
+    <body>
+
+    <p><a href="./">Flashcards</a></p>
+
+    <table cellpadding="5">
+        <tr>
+            <td>questions answered</td>
+            <td id="questionsAnswered">0</td>
+        </tr>
+        <tr>
+            <td>average time</td>
+            <td id="averageTime">0</td>
+        </tr>
+    </table>
+
+    <button id="nextButton"> Start </button>
+    <span id="timer" class="bigNumber" class="marginy"></span>
+
+    <div id="flashcard" class="marginy hide">
+        <div id="topNumber" class="bigNumber" class="right"></div>
+        <div class="bigNumber" class="right">x</div>
+        <div id="bottomNumber" class="bigNumber" class="right"></div>
+    </div>
+   
+
+    <div id="resultMessage" class="bigNumber" class="marginy"></div>
+
+
+    <div id="interim_span"></div>
+    <div id="final_span"></div>
+
+    <!-- Place this asynchronous JavaScript just before your </body> tag -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="flashcards.js"></script>
+
+    </body>
+</html>

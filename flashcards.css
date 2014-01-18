@@ -1,0 +1,17 @@
+.hide { display: none;}
+.show { display: block;}
+.bigNumber {
+	font-size: 30px;
+}
+.right {
+	text-align: right;
+}
+.green {
+	color: #00FF00;
+}
+.red{
+	color: #FF0000;
+}
+.marginy {
+	margin: 25px;
+}
