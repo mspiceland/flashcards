@@ -1,7 +1,17 @@
+body {
+  padding-top: 20px;
+}
+.maintext {
+  padding: 40px 15px;
+  text-align: center;
+}
 .hide { display: none;}
 .show { display: block;}
 .bigNumber {
 	font-size: 30px;
+}
+.normaltext {
+	font-size: 18px;
 }
 .right {
 	text-align: right;
@@ -14,4 +24,33 @@
 }
 .marginy {
 	margin: 25px;
+}
+.topNumber {
+	position: absolute;
+	top: 10px;
+	right: 100px;
+}
+#flashcard {
+	background-image: url(./flashcard.png); 
+	height: 253px; 
+	width: 200px; 
+	position: relative;
+}
+#topNumber {
+	font-size: 80px;
+	position: absolute;
+	top: 10px;
+	right: 75px;
+}
+#bottomNumber {
+	font-size: 80px;
+	position: absolute;
+	top: 140px;
+	right: 75px;
+}
+#operator {
+	font-size: 60px;
+	position: absolute;
+	top: 80px;
+	right: 75px;
 }

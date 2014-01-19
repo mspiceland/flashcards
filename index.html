@@ -2,40 +2,75 @@
 <html lang="en">
     <head>
         <title>Flashcards</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="flashcards.css" />
+
     </head>
     <body>
 
-    <p><a href="./">Flashcards</a></p>
-
-    <p>This page will present you with multiplication flash cards and allow you to provide the answers with your voice.  First, click start.  If a message pops up asking for permissions to use your mic, click 'allow'.  Now, say the answers to the questions that are presented.  For instance, if the answer is 15, simply say "fifteen".</p>
-
-    <table cellpadding="5">
-        <tr>
-            <td>questions answered</td>
-            <td id="questionsAnswered">0</td>
-        </tr>
-        <tr>
-            <td>average time</td>
-            <td id="averageTime">0</td>
-        </tr>
-    </table>
-
-    <button id="nextButton"> Start </button>
-    <span id="timer" class="bigNumber" class="marginy"></span>
-
-    <div id="flashcard" class="marginy hide">
-        <div id="topNumber" class="bigNumber" class="right"></div>
-        <div class="bigNumber" class="right">x</div>
-        <div id="bottomNumber" class="bigNumber" class="right"></div>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Flashcards</a>
+        </div>
+        <div class="collapse navbar-collapse">
+        </div><!--/.nav-collapse -->
+      </div>
     </div>
-   
 
-    <div id="resultMessage" class="bigNumber" class="marginy"></div>
+    <div class="container">
 
+      <div class="maintext">
+        <p class="lead">First, click start.  If a message pops up asking for permissions to use your mic, click 'allow'.  Now, say the answers to the questions that are presented.  For instance, if the answer is 15, simply say "fifteen".</p>
+      </div>
+
+    </div><!-- /.container -->
+
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="col-md-6" align="center">
+
+            <button id="nextButton" class="btn btn-lg btn-primary"> Start </button>
+            <table cellpadding="5" class="normaltext">
+                <tr>
+                    <td>answered</td>
+                    <td id="questionsAnswered">0</td>
+                </tr>
+                <tr>
+                    <td>average time</td>
+                    <td id="averageTime">0</td>
+                </tr>
+            </table>
+
+            <div id="timer" class="bigNumber" class="marginy"></div>
+
+            <div id="resultMessage" class="bigNumber" class="marginy"></div>
+        </div>
+
+        <div class="col-md-6" align="center">
+            <div id="flashcard">
+                <div id="topNumber" class="bigNumber"></div>
+                <div id="operator" class="bigNumber hide">x</div>
+                <div id="bottomNumber" class="bigNumber"></div>
+            </div>
+        </div>
+
+    </div>
 
     <!-- Place this asynchronous JavaScript just before your </body> tag -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <script src="flashcards.js"></script>
 
     </body>

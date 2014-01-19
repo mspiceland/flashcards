@@ -99,7 +99,7 @@ function startRec() {
   is_recognizing = true;
 	$('#nextButton').html(' Stop ');
   recognition.start();
-  $('#flashcard').show();
+  $('#operator').removeClass('hide');
 }
 
 function startTimer() {
