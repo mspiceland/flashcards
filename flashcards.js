@@ -114,9 +114,33 @@ function next() {
 		stopRec();
 		return;
 	}
-	topNumber = getRandomNumber(10);
-	bottomNumber = getRandomNumber(10);
-	answer = topNumber * bottomNumber;
+
+	// behavior based on dropdown
+	var mode = $('#mode').val();
+	console.log(mode);
+
+	if (mode === 'multiplication') {
+		topNumber = getRandomNumber(10);
+		bottomNumber = getRandomNumber(10);
+		answer = topNumber * bottomNumber;
+		$('#operator').html('*');
+	} else if (mode === 'division') {
+		bottomNumber = getRandomNumber(10);
+		topNumber = bottomNumber * getRandomNumber(10);
+		answer = topNumber / bottomNumber;
+		$('#operator').html('/');
+	} else if (mode === 'addition') {
+		topNumber = getRandomNumber(10);
+		bottomNumber = getRandomNumber(10);
+		answer = topNumber + bottomNumber;
+		$('#operator').html('+');
+	} else if (mode === 'subtraction') {
+		topNumber = getRandomNumber(10);
+		bottomNumber = topNumber - getRandomNumber(topNumber);
+		answer = topNumber - bottomNumber;
+		$('#operator').html('-');
+	}
+	
 	console.log('answer is ' + answer);
 	$('#topNumber').html(topNumber);
 	$('#bottomNumber').html(bottomNumber);
